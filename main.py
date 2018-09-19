@@ -1,6 +1,5 @@
 from montecarlo import MonteCarlo
 
 algo = MonteCarlo()
-
-var researchTree = algo.getResearchTree()
+algo.simulate(10)
 

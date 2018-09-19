@@ -13,15 +13,14 @@ class MonteCarlo(object):
     def getResearchTree(self):
         return self.researchTree
 
-    def getLeapCountBaseTree(self):
-        for dd in self.baseTree.values():
-            print(dd)
-
     def isTotallyExplored(self):
-        if()
+        if self.baseTree.count == self.researchTree.count:
+            return True
+        else:
+            return False
 
     def simulate(self, count):
-        if count == 0 || :
+        if count == 0 or self.isTotallyExplored():
             return
 
         self.descent()

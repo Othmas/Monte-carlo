@@ -12,12 +12,21 @@ class Node(object):
 
     def setScore(self, newScore):
         self.score = newScore
+
+    def getScore(self):
+        return self.score
     
     def setPassCount(self, newPassCount):
         self.passCount = newPassCount
 
+    def getPassCount(self):
+        return self.passCount
+
     def getChildCount(self):
         return self.children.count()
+
+    def getChildren(self):
+        return self.children
 
     def isExplored(self):
         return self.explored

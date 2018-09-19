@@ -10,8 +10,18 @@ class MonteCarlo(object):
     def setReasearchTree(self, newResearchTree):
         self.researchTree = newResearchTree
 
-    def simulate(self, researchTree, count):
-        if count == 0:
+    def getResearchTree(self):
+        return self.researchTree
+
+    def getLeapCountBaseTree(self):
+        for dd in self.baseTree.values():
+            print(dd)
+
+    def isTotallyExplored(self):
+        if()
+
+    def simulate(self, count):
+        if count == 0 || :
             return
 
         self.descent()

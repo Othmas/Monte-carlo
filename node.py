@@ -14,3 +14,6 @@ class Node(object):
     
     def setPassCount(self, newPassCount):
         self.passCount = newPassCount
+
+    def getChildCount(self):
+        return self.children.count()

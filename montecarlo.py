@@ -1,21 +1,34 @@
-class Node(object):
-    value = ""
-    children = []
-    
-    def __init__(self, value):
-        self.value = value
+from node import Node
 
-    def addChild(self, child):
-        self.children.append(child)
+class MonteCarlo(object):
+    baseTree = []
+    researchTree = []
 
-def main():
-    root = Node("root")
+    def setBaseTree(self, newBaseTree):
+        self.baseTree = newBaseTree
 
-    leap1 = Node("leap1")
-    leap2 = Node("leap2")
+    def setReasearchTree(self, newResearchTree):
+        self.researchTree = newResearchTree
 
-    root.addChild(leap1)
-    root.addChild(leap2)
+    def simulate(self, researchTree, count):
+        if count == 0:
+            return
 
-main()
+        self.descent()
+        self.growth()
+        self.rollOut()
+        self.update()
+
+    def descent(self):
+        print("descent")
+
+    def growth(self):
+        print("growth")
+
+    def rollOut(self):
+        print("rollOut")
+
+    def update(self):
+        print("update")
+
     

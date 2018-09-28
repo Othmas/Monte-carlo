@@ -7,7 +7,7 @@ class Node(object):
         self.explored = False
         self.index = Node.totalNumber
         Node.totalNumber += 1
-    
+
     def addChild(self, child):
         self.children.append(child)
 
@@ -31,6 +31,9 @@ class Node(object):
 
     def getChildren(self):
         return self.children
+
+    def getIndex(self):
+        return self.index
 
     def isExplored(self):
         return self.explored

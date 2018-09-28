@@ -1,9 +1,13 @@
 class Node(object):
     score = 0
+    index = 0
     passCount = 0
     children = []
     explored = False
     
+    def __init__(self, index):
+        self.index = index
+
     def addChild(self, child):
         self.children.append(child)
 
@@ -27,6 +31,9 @@ class Node(object):
 
     def getChildren(self):
         return self.children
+
+    def getIndex(self):
+        return self.index
 
     def isExplored(self):
         return self.explored

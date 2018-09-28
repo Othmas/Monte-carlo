@@ -53,7 +53,7 @@ class MonteCarlo(object):
         self.update()
 
     def descent(self):
-        
+        print("descent")
 
     def growth(self):
         print("growth")

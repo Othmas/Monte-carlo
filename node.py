@@ -1,12 +1,11 @@
 class Node(object):
-    totalNumber =0
-    def __init__(self):
+
+    def __init__(self, index):
         self.score = 0
         self.passCount = 0
         self.children = []
         self.explored = False
-        self.index = Node.totalNumber
-        Node.totalNumber += 1
+        self.index = index
 
     def addChild(self, child):
         self.children.append(child)
@@ -27,7 +26,7 @@ class Node(object):
         return self.passCount
 
     def getChildCount(self):
-        return self.children.count()
+        return len(self.children)
 
     def getChildren(self):
         return self.children

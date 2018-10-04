@@ -19,16 +19,12 @@ class MonteCarlo(object):
         return self.researchTree
 
     def getNodeCount(self, node, count):
-        count = 0
         if node.getChildCount != 0:
              for n in node.children:
                 count += self.getNodeCount(n, count)
 
         print("has ", node.getChildCount(), " children")
-
-       
-
-        return count
+        return 1
 
     def getNodeByIndex(self, index):
         for node in self.researchTree:

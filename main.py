@@ -2,6 +2,8 @@ from montecarlo import MonteCarlo
 from node import Node
 import jsonpickle
 
+#pip install -U jsonpickle
+
 
 
 file=open("save.txt",'r')

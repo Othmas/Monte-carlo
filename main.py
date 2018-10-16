@@ -6,10 +6,10 @@ import jsonpickle
 
 
 
-file=open("save.txt",'r')
+file=open("save.json",'r')
 thawed=jsonpickle.decode(file.read())
-print(thawed.toString())
+#print(thawed.toString())
 
 algo = MonteCarlo(thawed, None)
 #algo.simulate(1)
-print(algo.getNodeCount(algo.baseTree, 0))
+print("Taille de l' arbre : ", algo.getNodeCount(algo.baseTree))

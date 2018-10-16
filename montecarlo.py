@@ -4,7 +4,6 @@ import math
 class MonteCarlo(object):
     ponderationValue = 2
 
-
     def __init__(self, baseTree, researchTree):
         self.baseTree = baseTree
         self.researchTree = researchTree
@@ -18,13 +17,16 @@ class MonteCarlo(object):
     def getResearchTree(self):
         return self.researchTree
 
-    def getNodeCount(self, node, count):
-        if node.getChildCount != 0:
-             for n in node.children:
-                count += self.getNodeCount(n, count)
+    def getNodeCount(self, node):
+        count = 0
 
-        print("has ", node.getChildCount(), " children")
-        return 1
+        if len(node.children) == 0:
+            return 1
+
+        for n in node.children:
+            count += self.getNodeCount(n)
+
+        return count+1
 
     def getNodeByIndex(self, index):
         for node in self.researchTree:

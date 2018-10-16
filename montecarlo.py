@@ -46,9 +46,9 @@ class MonteCarlo(object):
         if count == 0 or self.isTotallyExplored():
             return
 
-        currentNode = self.descent(self.baseTree[0])
+        currentNode = self.descent(self.baseTree)
         self.growth(currentNode)
-        self.rollOut()
+        self.rollOut(currentNode)
         self.update()
 
     #Descente dans l'arbre de base
@@ -65,7 +65,7 @@ class MonteCarlo(object):
 
         #Si tous les childrens n'ont pas été exploré, retourner le plus à gauche non exploré
         #Sinon calcul de l'Upper Bound Confidence
-        for node in rootNode.getChildren:
+        for node in rootNode.getChildren():
             if node.isExplored == False:
                 return rootNode
             else :
@@ -95,8 +95,14 @@ class MonteCarlo(object):
 
         return
                 
-    def rollOut(self):
-        print("rollOut")
+    def rollOut(self, currentNode):
+        if len(currentNode.children) == 0:
+            return currentNode
+        else:
+            #On prend la node le plus à gauche
+            newNode = currentNode.getChild(0)
+            self.rollOut(newNode)
+ 
 
     def update(self):
         print("update")

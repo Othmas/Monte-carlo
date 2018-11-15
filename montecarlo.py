@@ -105,6 +105,6 @@ class MonteCarlo(object):
  
 
     def update(self):
-        print("update")
+        
 
     
